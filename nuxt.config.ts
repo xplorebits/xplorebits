@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@vueuse/nuxt", "@pinia/nuxt", "@nuxtjs/tailwindcss"],
+  modules: [
+    "@vueuse/nuxt",
+    "@pinia/nuxt",
+    "@nuxtjs/tailwindcss",
+    ["@storyblok/nuxt", { accessToken: "ZrVPgCfINbPAYwsu7nEWJAtt" }],
+  ],
   app: {
     head: {
       link: [

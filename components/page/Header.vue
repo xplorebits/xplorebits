@@ -1,15 +1,6 @@
 <template>
   <div
-    class="
-      relative
-      h-[48px]
-      border-b
-      inline-flex
-      w-full
-      items-center
-      gap-x-4
-      px-3
-    "
+    class="relative h-16 border-b inline-flex w-full items-center gap-x-4 px-6"
   >
     <nuxt-link class="font-bold hover:text-blue-600" to="/">
       Xplorebits
