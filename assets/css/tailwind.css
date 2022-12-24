@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+document,
 body {
-  background-color: #fff;
+  font-family: "Inter", sans-serif;
 }
 
 .page-enter-active,
