@@ -1,8 +1,5 @@
 {
   "private": true,
-  "engines": {
-    "node": "14"
-  },
   "scripts": {
     "build": "NITRO_PRESET=firebase nuxt build",
     "dev": "nuxt dev",
