@@ -1,28 +1,6 @@
 {
-  "functions": {
-    "source": ".output/server"
-  },
-  "hosting": [
-    {
-      "site": "cloudchatrahq",
-      "public": ".output/public",
-      "cleanUrls": true,
-      "rewrites": [
-        {
-          "source": "**",
-          "function": "server"
-        }
-      ]
-    }
-  ],
-  "emulators": {
-    "hosting": {
-      "host": "localhost",
-      "port": "8090"
-    }
-  },
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
+  "hosting": {
+    "public": ".output/public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
