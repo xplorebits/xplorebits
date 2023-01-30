@@ -11,7 +11,8 @@
         items-center
       "
     >
-      <a
+      <nuxt-link
+        to="/"
         class="
           flex
           title-font
@@ -24,7 +25,7 @@
       >
         <logo class="h-[24px] w-auto" />
         <span class="ml-3 text-xl">Xplorebits</span>
-      </a>
+      </nuxt-link>
       <nav
         class="md:ml-auto flex flex-wrap items-center text-base justify-center"
       >
@@ -32,9 +33,15 @@
         <nuxt-link to="/about" class="mr-5 hover:text-gray-900"
           >About</nuxt-link
         >
-        <nuxt-link to="/" class="mr-5 hover:text-gray-900">Services</nuxt-link>
-        <nuxt-link to="/" class="mr-5 hover:text-gray-900">Portfolio</nuxt-link>
-        <nuxt-link to="/" class="mr-5 hover:text-gray-900">Contact</nuxt-link>
+        <nuxt-link to="/" class="hidden mr-5 hover:text-gray-900"
+          >Services</nuxt-link
+        >
+        <nuxt-link to="/" class="hidden mr-5 hover:text-gray-900"
+          >Portfolio</nuxt-link
+        >
+        <nuxt-link to="/" class="hidden mr-5 hover:text-gray-900"
+          >Contact</nuxt-link
+        >
       </nav>
       <button
         class="
