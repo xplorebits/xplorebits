@@ -1,89 +1,80 @@
 <template>
-  <div
-    class="relative h-16 border-b inline-flex w-full items-center gap-x-4 px-6"
-  >
-    <nuxt-link class="font-bold hover:text-blue-600" to="/">
-      Xplorebits
-    </nuxt-link>
-    <page-nav-item> Projects </page-nav-item>
-    <page-nav-item> Boards </page-nav-item>
-    <page-nav-item>
-      <div class="flex items-center gap-1">
-        Software Development
-        <ArrowTopRightOnSquareIcon
-          class="w-4 h-4 text-gray-400"
-          aria-hidden="true"
-        />
-      </div>
-    </page-nav-item>
-
-    <page-search v-if="useRoute().path !== '/'" />
-
-    <div class="flex-grow" />
-    <button
-      type="button"
+  <header class="z-50 bg-wrapper text-gray-600 body-font">
+    <div
       class="
-        inline-flex
+        container
+        mx-auto
+        flex flex-wrap
+        p-5
+        flex-col
+        md:flex-row
         items-center
-        rounded-full
-        border border-blue-300
-        bg-blue-100
-        px-3.5
-        py-1.5
-        text-sm
-        font-medium
-        leading-4
-        text-blue-600
-        shadow-sm
-        hover:bg-blue-200
-        focus:outline-none focus:ring-0
       "
     >
-      Log In
-    </button>
-    <button
-      type="button"
-      class="
-        inline-flex
-        items-center
-        rounded-full
-        border border-transparent
-        bg-blue-700
-        px-3.5
-        py-1.5
-        text-sm
-        font-medium
-        leading-4
-        text-white
-        shadow-sm
-        hover:bg-blue-700
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-      "
-    >
-      Create Account
-    </button>
-
-    <div class="border-r border-gray-300 w-1 h-[50%]" />
-
-    <button
-      type="button"
-      class="
-        inline-flex
-        items-center
-        rounded-full
-        border border-blue-300
-        p-1
-        text-blue-600
-        shadow-sm
-        hover:bg-blue-700
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-      "
-    >
-      <MoonIcon class="h-4 w-4" aria-hidden="true" />
-    </button>
-  </div>
+      <a
+        class="
+          flex
+          title-font
+          font-medium
+          items-center
+          text-gray-900
+          mb-4
+          md:mb-0
+        "
+      >
+        <logo class="h-[24px] w-auto" />
+        <span class="ml-3 text-xl">Xplorebits</span>
+      </a>
+      <nav
+        class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+      >
+        <nuxt-link to="/" class="mr-5 hover:text-gray-900">Home</nuxt-link>
+        <nuxt-link to="/about" class="mr-5 hover:text-gray-900"
+          >About</nuxt-link
+        >
+        <nuxt-link to="/" class="mr-5 hover:text-gray-900">Services</nuxt-link>
+        <nuxt-link to="/" class="mr-5 hover:text-gray-900">Portfolio</nuxt-link>
+        <nuxt-link to="/" class="mr-5 hover:text-gray-900">Contact</nuxt-link>
+      </nav>
+      <button
+        class="
+          hidden
+          inline-flex
+          items-center
+          bg-gray-100
+          border-0
+          py-1
+          px-3
+          focus:outline-none
+          hover:bg-gray-200
+          rounded
+          text-base
+          mt-4
+          md:mt-0
+        "
+      >
+        Button
+        <svg
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-4 h-4 ml-1"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
 </template>
 
-<script setup>
-import { MoonIcon, ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
-</script>
+<style scoped>
+.bg-wrapper {
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(21px);
+  backdrop-filter: blur(21px);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+</style>
